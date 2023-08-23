@@ -3,9 +3,9 @@ from django.views import generic
 from .models import Post
 
 class PostList(generic.ListView):
-    query = Post.objects.filter(status=1).order_by("-created_on")
-    template = "index.html"
+    queryset = Post.objects.filter(status=1).order_by("-created_on")
+    template_name = "index.html"
 
 class PostDetail(generic.DetailView):
      model = Post
-     template = "post_detail.html"
+     template_name = "post_detail.html"
