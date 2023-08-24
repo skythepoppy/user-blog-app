@@ -11,7 +11,8 @@ class PostForm(f.ModelForm):
             'title': f.TextInput(attrs={'class':'form-control'}),
             'slug': f.TextInput(attrs={'class': 'form-control', 'placeholder':'Enter any tags related to your post'
                                                                               ' separated by dashes (-)'}),
-            'author': f.Select(attrs={'class': 'form-control'}),
+            #'author': f.Select(attrs={'class': 'form-control'}),
+            'author': f.TextInput(attrs={'class': 'form-control', 'value':'', 'id':'author', 'type':'hidden'}),
             'content': f.Textarea(attrs={'class': 'form-control', 'placeholder': 'Write Away!'}),
             'status': f.Select(attrs={'class': 'form-control'}),
         }
