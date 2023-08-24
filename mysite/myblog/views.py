@@ -15,3 +15,7 @@ class AddPost(generic.CreateView):
     model = Post
     form_class = PostForm
     template_name = "add_post.html"
+
+class UserProfile(generic.DetailView):
+    model = Post
+    template_name = "user_profile.html"
