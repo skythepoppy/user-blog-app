@@ -44,9 +44,18 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
+                        {% if user.is_authenticated %}
                         <li class="nav-item text-black">
                             <a class="nav-link text-black font-weight-bold" href="{% url 'add_post' %}">Add Post</a>
                         </li>
+                        <li class="nav-item text-black">
+                            <a class="nav-link text-black font-weight-bold" href="{% url 'logout' %}">Logout</a>
+                        </li>
+                        <li class="nav-item text-black">
+                            <a class="nav-link text-black font-weight-bold" href="https://portfolio-raphael.streamlit.
+                            app">Main Website</a>
+                        </li>
+                        {% else %}
                         <li class="nav-item text-black">
                             <a class="nav-link text-black font-weight-bold" href="{% url 'register' %}">Register</a>
                         </li>
@@ -54,12 +63,10 @@
                             <a class="nav-link text-black font-weight-bold" href="{% url 'login' %}">Login</a>
                         </li>
                         <li class="nav-item text-black">
-                            <a class="nav-link text-black font-weight-bold" href="#">About</a>
-                        </li>
-                        <li class="nav-item text-black">
                             <a class="nav-link text-black font-weight-bold" href="https://portfolio-raphael.streamlit.
                             app">Main Website</a>
                         </li>
+                        {% endif %}
 
                     </ul>
                 </div>

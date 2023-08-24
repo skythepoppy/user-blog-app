@@ -5,6 +5,7 @@
 
 <br/><br/>
 
+{% if user.is_authenticated %}
 <div class="col-md-8 col-md-10 mx-auto">
     <h1>Add a Blog Post...</h1>
     <form method="POST">
@@ -13,5 +14,12 @@
       <button class="btn btn-secondary">Post</button>
     </form>
 </div>
+{% else %}
+<div class="site-heading">
+    <h1 class="col-md-12 col-md-15 mx-auto text-black font-weight-bold">Uh oh! You need to register before you can
+        add a post!</h1>
+</div>
+
+{% endif %}
 
 {% endblock content %}
