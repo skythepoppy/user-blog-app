@@ -4,7 +4,7 @@
 {% block content %}
 <style>
     body {
-        font-family: "Roboto", sans-serif;
+        font-family: "Gill Sans", sans-serif;
         font-size: 18px;
         background-color: #fdfdfd;
     }
@@ -17,17 +17,25 @@
         box-shadow: 0 16px 48px #E3E7EB;
     }
 </style>
-<h1>Login...</h1>
-<br/><br/>
+
 <body>
-<div class="form-group">
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button class="btn btn-secondary">
-            Login
-        </button>
-    </form>
-</div>
+    <header class="masthead">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class=" col-md-8 col-md-10 mx-auto">
+                    <div class="site-heading">
+                        <h1>Login as an Existing User</h1>
+                        <br/><br/>
+                        <form method="POST">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button class="btn btn-secondary">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 </body>
 {% endblock content %}
