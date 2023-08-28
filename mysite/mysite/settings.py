@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myblog',
     'users',
+    'whitenoise.runserver_nostatic',
 ]
 
 MIDDLEWARE = [
