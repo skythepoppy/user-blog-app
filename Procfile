@@ -1,1 +1,1 @@
-web: gunicorn mysite.wsgi -log-file - --threads=3
+web: gunicorn mysite.wsgi
