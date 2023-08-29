@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'myblog',
     'users',
     'whitenoise.runserver_nostatic',
+
 ]
 
 MIDDLEWARE = [

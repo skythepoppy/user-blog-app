@@ -11,7 +11,7 @@ STATUS = (
 
 class Post(models.Model):
     title = models.CharField(max_length=300, unique=True)
-    header_image = models.ImageField(null=True, blank=True, upload_to="images/")
+    header_image = models.ImageField(null=True, blank=True, upload_to="images/", height_field='')
     slug = models.SlugField(max_length=300, unique=True)
     author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='blog_posts')
     updated_on = models.DateTimeField(auto_now=True)
