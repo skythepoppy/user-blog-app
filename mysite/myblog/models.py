@@ -1,6 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
+from PIL import Image as PILImage
+from io import BytesIO
+from django.core.files.uploadedfile import InMemoryUploadedFile
 
 
 
@@ -31,3 +34,4 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse('post_detail', args=(str(self.id),))
+
